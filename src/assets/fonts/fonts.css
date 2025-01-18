@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Amenti';
+  src:
+    url('@/assets/fonts/Amenti-Black.ttf') format('ttf'),
+    url('@/assets/fonts/Amenti-Bold.ttf') format('ttf'),
+    url('@/assets/fonts/Amenti-Medium.ttf') format('ttf'),
+    url('@/assets/fonts/Amenti-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
