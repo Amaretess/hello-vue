@@ -15,7 +15,7 @@
 
 <style scoped>
 .footer {
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .footer-link {
-  color: var(--main); /* Blue link color */
+  color: white; /* Blue link color */
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;

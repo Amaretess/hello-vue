@@ -1,21 +1,27 @@
 <script setup>
-import paragon from '../images/gradient.svg'
+import paragon from '../images/gradient-wmark.png';
+import paragonTop from '../images/gradient-logo.png';
+
+
 </script>
 <template>
+  
   <div class="container">
+    <div class="paragon-top-container">
+      <img class="paragon-top" :src="paragonTop" />
+    </div>
     <div class="header">
-      <h1 class="heading">Low FPS? Input delay?</h1>
-      <div class="branding">
-        <img class="paragon" :src="paragon" />
-      </div>
+      <h1>Max Performance. Zero Lag. Ultimate Gaming.</h1>
       <p class="description">
-        It is time to make your computer feel brand new! With our PC optimization service, we can
-        make your PC faster, fix input delay, and help you get higher FPS for smooth gaming.
+        Struggling with low FPS, stuttering, or input lag? We optimize your PC for peak speed, stability, and responsiveness—so you can focus on winning, not troubleshooting
       </p>
       <div class="buttons">
-        <button class="btn btn-lg mt-3 button">Book Now</button>
-        <button class="btn btn-lg mt-3 button">Learn more</button>
+        <button class=" button">Book Now</button>
+        <button class=" button">Learn more</button>
       </div>
+    </div>
+    <div class="paragon-container">
+      <img class="paragon" :src="paragon" />
     </div>
   </div>
 </template>
@@ -23,10 +29,11 @@ import paragon from '../images/gradient.svg'
 <style scoped>
 .container {
   display: flex;
-  justify-content: flex-start;
-  border: 2px solid var(--main);
-  height: 80vh;
-  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 70vh;
+  width: 100%;
   margin-top: 1rem;
 }
 
@@ -34,37 +41,81 @@ import paragon from '../images/gradient.svg'
   margin: 2rem;
 }
 
-.paragon {
-  width: 400px;
-  height: 100px;
+.paragon-top {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
 }
 
-@media (max-width: 768px) {
+
+@media (min-width: 1000px) {
+  .paragon-top-container {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .paragon-top-container {
+    width: 395px;
+    height: 60px;
+  }
+}
+
+.paragon {
+  width: 585px;
+  height: 135px;
+
+}
+.paragon-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+@media (max-width: 1050px) {
+  .paragon {
+    width: 497px;
+    height: 115px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .paragon {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1000px) {
   .container {
     flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    margin-top: 5rem;
   }
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
 }
+
+
 
 .block {
   padding: 1rem;
 }
 
-.button {
-  background-color: var(--main);
-  color: white;
-  margin: 1rem;
-}
 
-.heading {
-  font-size: 4rem;
-  font-family: 'Amenti-black';
-}
+
 
 .sub-heading {
   font-size: 4rem;
@@ -72,10 +123,21 @@ import paragon from '../images/gradient.svg'
 }
 
 .description {
-  width: 60%;
+  width: 80%;
 }
 
 .buttons {
   display: flex;
+  width: 70%;
+  gap: 1rem;
 }
+
+
+.button {
+  border: 2px solid var(--main);
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+}
+
 </style>

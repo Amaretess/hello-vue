@@ -1,15 +1,12 @@
 <script setup>
-import Carousel from './Carousel.vue'
 </script>
 
 <template>
   <div class="container">
     <div class="header">
-      <p id="sub-heading">Reviews</p>
-      <h1><span id="sub-heading">#1</span> Choice for Pro Players</h1>
+      <h1>Powering competitive gamers everywhere </h1>
       <p class="sub-heading-2">
-        Experience what it feels like to get your PC optimized by the same team who worked with your
-        favorite pros.
+        Experience pro-level PC optimization from the team behind top esports players.
       </p>
     </div>
   </div>
@@ -18,16 +15,18 @@ import Carousel from './Carousel.vue'
 <style scoped>
 .container {
   display: flex;
-  justify-content: flex-start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 20vh;
 }
 .header {
-  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-#sub-heading {
-  color: var(--main);
+.sub-heading-2 {
+  
 }
 </style>

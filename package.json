@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "swiper": "^11.2.3",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"
   },
@@ -25,5 +26,17 @@
     "prettier": "^3.3.3",
     "vite": "^6.0.1",
     "vite-plugin-vue-devtools": "^7.6.5"
-  }
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amaretess/hello-vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amaretess/hello-vue/issues"
+  },
+  "homepage": "https://github.com/Amaretess/hello-vue#readme"
 }

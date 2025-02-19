@@ -9,20 +9,20 @@ import logo from '../images/gradient.png'
     </div>
     <ul class="nav-links">
       <li>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink class="nav-link" to="/">Home</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink class="nav-link" to="/about">About</RouterLink>
       </li>
       <li>
-        <RouterLink to="/services">Services</RouterLink>
+        <RouterLink class="nav-link" to="/services">Services</RouterLink>
       </li>
       <li>
-        <RouterLink to="/partners">Our Partners</RouterLink>
+        <RouterLink class="nav-link" to="/partners">Our Partners</RouterLink>
       </li>
     </ul>
     <div class="signin-button">
-      <button><RouterLink class="link" to="/signin">Sign In</RouterLink></button>
+      <button class="button"><RouterLink class="link" to="/signin">Book Now</RouterLink></button>
     </div>
   </nav>
 </template>
@@ -42,14 +42,15 @@ import logo from '../images/gradient.png'
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--bg-color);
+  background-color: rgba(205, 90, 90, 0.1);/* Fully transparent */
+  backdrop-filter: blur(5px); /* Optional: Adds blur effect to the background */
   position: fixed;
   width: 100%;
   z-index: 1000;
 }
 
 .logo {
-  width: 50px;
+  width: 38px;
   height: 50px;
   z-index: 1;
 }
@@ -67,13 +68,13 @@ import logo from '../images/gradient.png'
 a {
   text-decoration: none;
   color: white;
+  font-size: 16px;
 }
 
 .signin-button button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-  background-color: var(--main);
   color: white;
   border-radius: 5px;
 }
@@ -84,6 +85,19 @@ a {
 
 .link {
   color: white;
-  background-color: var(--main);
 }
+
+.button {
+  border: 2px solid var(--main);
+}
+
+@media (max-width: 700px) {
+  .button {
+    display: none;
+  }
+  .nav-link {
+    display: none;
+  }
+}
+
 </style>
