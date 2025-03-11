@@ -1,23 +1,25 @@
 <script setup>
-import paragon from '../images/gradient-wmark.png';
-import paragonTop from '../images/gradient-logo.png';
+import { ref } from "vue";
+import paragon from '../../images/gradient-wmark.png';
+import paragonTop from '../../images/gradient-logo.png';
+import RickRoll from '../RickRoll.vue';
 
-
+const showRickRoll = ref(false);
 </script>
 <template>
-  
+  <RickRoll v-if="showRickRoll" />
   <div class="container">
     <div class="paragon-top-container">
       <img class="paragon-top" :src="paragonTop" />
     </div>
     <div class="header">
-      <h1>Max Performance. Zero Lag. Ultimate Gaming.</h1>
+      <h1>Max Performance. Zero Lag. <span class="accent">Ultimate Gaming</span>.</h1>
       <p class="description">
         Struggling with low FPS, stuttering, or input lag? We optimize your PC for peak speed, stability, and responsiveness—so you can focus on winning, not troubleshooting
       </p>
       <div class="buttons">
-        <button class=" button">Book Now</button>
-        <button class=" button">Learn more</button>
+        <button @click="showRickRoll = true" class=" button">Book Now</button>
+        <button @click="showRickRoll = true" class=" button">Learn more</button>
       </div>
     </div>
     <div class="paragon-container">
@@ -59,6 +61,10 @@ import paragonTop from '../images/gradient-logo.png';
     width: 395px;
     height: 60px;
   }
+}
+
+.accent {
+  color: var(--main);
 }
 
 .paragon {

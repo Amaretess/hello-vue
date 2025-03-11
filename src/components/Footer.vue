@@ -28,6 +28,7 @@
   gap: 15px;
 }
 
+
 .footer-link {
   color: white; /* Blue link color */
   text-decoration: none;
@@ -36,6 +37,6 @@
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  color: rgb(163, 32, 32);
 }
 </style>
